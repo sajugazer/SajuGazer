@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1718960686183338"
+     crossorigin="anonymous"></script>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <title>Sajugazer - Free Four Pillars (Saju) Chart Calculator & Analysis</title>
+    <meta name="description" content="Free online Saju (Four Pillars of Destiny) chart calculator. Get instant personality, fortune, and life cycle analysis based on your birth data. No sign-up required.">
+    <meta property="og:title" content="Sajugazer - Free Four Pillars (Saju) Chart Calculator & Analysis">
+    <meta property="og:description" content="Free online Saju (Four Pillars of Destiny) chart calculator. Get instant personality, fortune, and life cycle analysis based on your birth data.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sajugazer.com/">
+    <meta property="og:site_name" content="Sajugazer">
+    <link rel="stylesheet" href="style.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Sajugazer",
+      "url": "https://sajugazer.com",
+      "description": "Free online Saju (Four Pillars of Destiny) chart calculator and analysis tool for self-reflection.",
+      "applicationCategory": "LifestyleApplication",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    }
+    </script>
+</head>
+<body>
+    <canvas id="starfield"></canvas>
+    <nav class="site-nav" aria-label="Main navigation">
+        <input type="checkbox" id="nav-toggle" class="site-nav-toggle" aria-hidden="true">
+        <div class="site-nav-bar">
+            <a href="./" class="site-nav-logo">Sajugazer</a>
+            <label for="nav-toggle" class="site-nav-toggle-label" aria-label="Menu"><span></span><span></span><span></span></label>
+        </div>
+        <div class="site-nav-menu">
+            <div class="site-nav-category"><div class="site-nav-cat-title">Learn</div><div class="site-nav-links"><a href="whatissaju/">What is Saju</a><a href="howtoread/">How to Read</a><a href="tenstars/">Ten Stars</a><a href="stars/">Fateful Stars</a><a href="12stars/">12 Stages</a></div></div>
+            <div class="site-nav-category"><div class="site-nav-cat-title">Fortune</div><div class="site-nav-links"><a href="total/">Total</a><a href="daily/">Daily</a><a href="monthly/">Monthly</a><a href="yearly/">Yearly</a><a href="decade/">Decade</a></div></div>
+            <div class="site-nav-category"><div class="site-nav-cat-title">Info</div><div class="site-nav-links"><a href="about/">About</a><a href="contact/">Contact</a><a href="privacy/">Privacy</a><a href="terms/">Terms</a></div></div>
+        </div>
+    </nav>
+    <main>
+    <div class="container">
+        <h1>Sajugazer v1.0</h1>
+        <h4>The code of your life.<br>Decode patterns. Read yourself.</h4>
+        <h5>&gt; Sajugazer instantly computes a precise Saju (Four Pillars) chart based on your birth data, utilizing a sophisticated chronological engine. It then processes these complex elemental patterns through a high-fidelity analysis logic to provide deeply structured insights into your life cycles. Experience a seamless integration of traditional Asian metaphysics and modern algorithmic interpretation, designed for clarity and self-reflection.
+            <br>&gt; This service is for self-reflection and insight, not deterministic prediction.
+<mark>Decisions remain your own.</mark>
+            <br>&gt; We do not store birth data beyond calculation purposes. But, input data remains strictly on your local device. To permanently remove your information, simply clear your browser's cache.</h5>
+    <!-- Footer Links -->
+        <div style="text-align: center; padding: 10px 0 20px; line-height: 2;">
+            <a href="about/" style="color: #aaaaaa; font-size: 0.65rem; text-decoration: none; margin: 0 6px;">About</a>
+            <a href="contact/" style="color: #aaaaaa; font-size: 0.65rem; text-decoration: none; margin: 0 6px;">Contact</a>
+            <a href="privacy/" style="color: #aaaaaa; font-size: 0.65rem; text-decoration: none; margin: 0 6px;">Privacy Policy</a>
+            <a href="terms/" style="color: #aaaaaa; font-size: 0.65rem; text-decoration: none; margin: 0 6px;">Terms of Service</a>
+            <br>
+            <a href="whatissaju/" style="color: #ffffff; font-size: 0.7rem; text-decoration: none; margin: 0 6px;">What is Saju?</a>
+            <a href="howtoread/" style="color: #ffffff; font-size: 0.7rem; text-decoration: none; margin: 0 6px;">How to Read Saju?</a>
+            <a href="stars/" style="color: #ffffff; font-size: 0.7rem; text-decoration: none; margin: 0 6px;">What is Fateful Stars?</a>
+            <br>
+            <a href="tenstars/" style="color: #ffffff; font-size: 0.7rem; text-decoration: none; margin: 0 6px;">What is Ten Stars?</a>
+            <a href="12stars/" style="color: #ffffff; font-size: 0.7rem; text-decoration: none; margin: 0 6px;">What is 12 Stages?</a>
+            <br>
+            <a href="example/male-1990/total/" style="color: #63ffff; font-size: 0.65rem; text-decoration: none; margin: 0 4px;">Sample 1(1990/01/01 man): Total Luck </a>
+            <a href="example/male-1990/daily/" style="color: #63ffff; font-size: 0.65rem; text-decoration: none; margin: 0 4px;">Daily Luck</a>
+            <a href="example/male-1990/monthly/" style="color: #63ffff; font-size: 0.65rem; text-decoration: none; margin: 0 4px;">Monthly Luck</a>
+            <a href="example/male-1990/yearly/" style="color: #63ffff; font-size: 0.65rem; text-decoration: none; margin: 0 4px;">Yearly Luck</a>
+            <a href="example/male-1990/decade/" style="color: #63ffff; font-size: 0.65rem; text-decoration: none; margin: 0 4px;">Decade Luck</a>
+            <br>
+            <a href="example/female-2000/total/" style="color: #fa6cff; font-size: 0.65rem; text-decoration: none; margin: 0 4px;">Sample 2(2000/12/03 woman): Total Luck</a>
+            <a href="example/female-2000/daily/" style="color: #fa6cff; font-size: 0.65rem; text-decoration: none; margin: 0 4px;">Daily Luck</a>
+            <a href="example/female-2000/monthly/" style="color: #fa6cff; font-size: 0.65rem; text-decoration: none; margin: 0 4px;">Monthly Luck</a>
+            <a href="example/female-2000/yearly/" style="color: #fa6cff; font-size: 0.65rem; text-decoration: none; margin: 0 4px;">Yearly Luck</a>
+            <a href="example/female-2000/decade/" style="color: #fa6cff; font-size: 0.65rem; text-decoration: none; margin: 0 4px;">Decade Luck</a>
+        </div>
+
+        <!-- 입력 폼 -->
+        <section class="input-section">
+            <h2>Put your birth informations.</h2>
+            <div class="input-grid">
+                <div class="input-group">
+                    <label for="birthYear">Birth Year</label>
+                    <input type="number" id="birthYear" min="1900" max="2100" value="2000">
+                </div>
+                <div class="input-group">
+                    <label for="birthMonth">Birth Month</label>
+                    <input type="number" id="birthMonth" min="1" max="12" value="1">
+                </div>
+                <div class="input-group">
+                    <label for="birthDay">Birth Day</label>
+                    <input type="number" id="birthDay" min="1" max="31" value="1">
+                </div>
+                <div class="input-group">
+                    <label for="birthHour">Birth Hour</label>
+                    <input type="number" id="birthHour" min="0" max="23" value="12">
+                </div>
+                <div class="input-group">
+                    <label for="birthMinute">Birth Minute</label>
+                    <input type="number" id="birthMinute" min="0" max="59" value="0">
+                </div>
+                <div class="input-group">
+                    <label for="gender">Gender</label>
+                    <select id="gender">
+                        <option value="M">Male</option>
+                        <option value="F">Female</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="summertime">Observes DST?</label>
+                    <select id="summertime" required>
+                        <option value="" disabled>Y/N</option>
+                        <option value="no" selected>No</option>
+                        <option value="yes">Yes (-1hour)</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- 출생 도시 선택 -->
+            <div class="city-selector-wrapper">
+                <label class="city-selector-label">Region of Birth</label>
+                <input type="hidden" id="longitude" value="4.9041">
+                <input type="hidden" id="refLongitude" value="15">
+                <button type="button" id="citySelectBtn" class="city-select-btn">
+                    <span id="citySelectText">Amsterdam</span>
+                    <span class="city-select-arrow">&#9660;</span>
+                </button>
+                <div id="cityDropdown" class="city-dropdown"></div>
+            </div>
+
+            <button id="calculateBtn" class="calc-btn">View Results!</button>
+
+            <div class="corrected-time">
+                <p>Adjusted Date: <span id="correctedDateTime">-</span></p>
+            </div>
+        </section>
+        
+
+        <!-- 내 사주 해석하기 섹션 -->
+        <section class="interpretation-section" id="interpretationSection" style="display: none;">
+            <h2>Analyze my saju</h2>
+            <div class="interpretation-container">
+                <div class="interpretation-left">
+                    <button id="sajuAnalysisBtn" class="analysis-btn">Analyze My Saju</button>
+                    <div class="prompt-links">
+                        <span id="copyAIPromptBtn" class="text-link blue">Copy Prompt for AI</span>
+                        <span id="copy2026FortuneBtn" class="text-link red">2026 Fortune Analysis Prompt</span>
+                    </div>
+                </div>
+                <div class="interpretation-right">
+                    <div class="fortune-grid">
+                        <div class="fortune-row">
+                            <span class="fortune-label">Daily Luck</span>
+                            <input type="date" id="dailyFortuneDate" class="fortune-date" lang="en">
+                            <button class="fortune-btn" onclick="checkAndShowDailyFortune()">View Result</button>
+                        </div>
+                        <div class="fortune-row">
+                            <span class="fortune-label">Monthly Luck</span>
+                            <input type="month" id="monthlyFortuneDate" class="fortune-date" lang="en">
+                            <button class="fortune-btn" onclick="checkAndShowMonthlyFortune()">View Result</button>
+                        </div>
+                        <div class="fortune-row">
+                            <span class="fortune-label">Yearly Luck</span>
+                            <input type="number" id="yearlyFortuneYear" class="fortune-year" min="1900" max="2100" placeholder="Select year...">
+                            <button class="fortune-btn" onclick="checkAndShowYearlyFortune()">View Result</button>
+                        </div>
+                        <div class="fortune-row">
+                            <span class="fortune-label">Decade Luck</span>
+                            <select id="decadeFortuneSelect" class="fortune-select">
+                                <option value="" disabled selected>Select</option>
+                            </select>
+                            <button class="fortune-btn" onclick="checkAndShowDecadeFortune()">View Result</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 절기 테이블 (숨김) -->
+        <section class="solar-terms-section" style="display: none;">
+            <h2>절기표 (전년 대설 ~ 다음해 소한)</h2>
+            <table id="solarTermsTable" class="data-table">
+                <thead>
+                    <tr>
+                        <th>절기명</th>
+                        <th>황경</th>
+                        <th>일시 (KST)</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+
+        <!-- 사주 원국 + 오행 비율 -->
+        <section class="saju-section" id="sajuSection" style="display: none;">
+            <h2>My Saju Chart</h2>
+            <div class="saju-container">
+                <!-- 사주 원국 테이블 -->
+                <table class="saju-table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th><span>Time Pillar</span></th>
+                            <th><span>Date Pillar</span></th>
+                            <th><span>Month Pillar</span></th>
+                            <th><span>Year Pillar</span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="label">Ten Stars</td>
+                            <td><input type="text" id="sth" class="saju-box" readonly></td>
+                            <td><input type="text" id="sdh" class="saju-box" readonly></td>
+                            <td><input type="text" id="smh" class="saju-box" readonly></td>
+                            <td><input type="text" id="syh" class="saju-box" readonly></td>
+                        </tr>
+                        <tr class="stem-row">
+                            <td class="label">Heavenly Stems</td>
+                            <td><input type="text" id="th" class="saju-box stem" readonly></td>
+                            <td><input type="text" id="dhh" class="saju-box stem day-master" readonly></td>
+                            <td><input type="text" id="mhh" class="saju-box stem" readonly></td>
+                            <td><input type="text" id="yh" class="saju-box stem" readonly></td>
+                        </tr>
+                        <tr class="branch-row">
+                            <td class="label">Earthly Branches</td>
+                            <td><input type="text" id="te" class="saju-box branch" readonly></td>
+                            <td><input type="text" id="dee" class="saju-box branch" readonly></td>
+                            <td><input type="text" id="mee" class="saju-box branch" readonly></td>
+                            <td><input type="text" id="ye" class="saju-box branch" readonly></td>
+                        </tr>
+                        <tr>
+                            <td class="label">Ten Stars</td>
+                            <td><input type="text" id="ste" class="saju-box" readonly></td>
+                            <td><input type="text" id="sde" class="saju-box" readonly></td>
+                            <td><input type="text" id="sme" class="saju-box" readonly></td>
+                            <td><input type="text" id="sye" class="saju-box" readonly></td>
+                        </tr>
+                        <tr>
+                            <td class="label">Hidden Stems</td>
+                            <td><input type="text" id="inT" class="saju-box wide-box" readonly></td>
+                            <td><input type="text" id="inD" class="saju-box wide-box" readonly></td>
+                            <td><input type="text" id="inM" class="saju-box wide-box" readonly></td>
+                            <td><input type="text" id="inY" class="saju-box wide-box" readonly></td>
+                        </tr>
+                        <tr>
+                            <td class="label">12 Stages</td>
+                            <td><input type="text" id="sT" class="saju-box" readonly></td>
+                            <td><input type="text" id="sD" class="saju-box" readonly></td>
+                            <td><input type="text" id="sM" class="saju-box" readonly></td>
+                            <td><input type="text" id="sY" class="saju-box" readonly></td>
+                        </tr>
+                        <tr>
+                            <td class="label">Fateful Stars</td>
+                            <td><div id="gT" class="saju-box"></div></td>
+                            <td><div id="gD" class="saju-box"></div></td>
+                            <td><div id="gM" class="saju-box"></div></td>
+                            <td><div id="gY" class="saju-box"></div></td>
+                        </tr>
+                        <tr>
+                            <td class="label">Vertical</td>
+                            <td><div id="vT" class="relation-box"></div></td>
+                            <td><div id="vD" class="relation-box"></div></td>
+                            <td><div id="vM" class="relation-box"></div></td>
+                            <td><div id="vY" class="relation-box"></div></td>
+                        </tr>
+                        <tr>
+                            <td class="label">Horizonal</td>
+                            <td><div id="hT" class="relation-box"></div></td>
+                            <td><div id="hD" class="relation-box"></div></td>
+                            <td><div id="hM" class="relation-box"></div></td>
+                            <td><div id="hY" class="relation-box"></div></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- 오행 비율 테이블 -->
+                <table class="element-table">
+                    <thead>
+                        <tr>
+                            <th>Elements</th>
+                            <th>Proportion</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Wood</td><td><input type="text" id="wpro" class="element-box" readonly></td></tr>
+                        <tr><td>Fire</td><td><input type="text" id="fpro" class="element-box" readonly></td></tr>
+                        <tr><td>Earth</td><td><input type="text" id="epro" class="element-box" readonly></td></tr>
+                        <tr><td>Metal</td><td><input type="text" id="mpro" class="element-box" readonly></td></tr>
+                        <tr><td>Water</td><td><input type="text" id="watpro" class="element-box" readonly></td></tr>
+                    </tbody>
+                    <thead>
+                        <tr>
+                            <th>Yin and Yang</th>
+                            <th>Proportion</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Yin</td><td><input type="text" id="yinpro" class="element-box" readonly></td></tr>
+                        <tr><td>Yang</td><td><input type="text" id="yangpro" class="element-box" readonly></td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 대운 -->
+        <section class="decade-luck-section" id="decadeLuckSection" style="display: none;">
+            <h2>Decade Luck</h2>
+            <p class="direction-info">Direct/Reverse: <span id="decadeDirection">-</span> | Decade Number: <span id="decadeStartAge">-</span></p>
+            <div class="table-scroll">
+                <table class="luck-table">
+                    <tbody>
+                        <tr>
+                            <td class="label">Start<Br>age</td>
+                            <td><input type="text" id="decadeNum-10" class="luck-box num" readonly></td>
+                            <td><input type="text" id="decadeNum-9" class="luck-box num" readonly></td>
+                            <td><input type="text" id="decadeNum-8" class="luck-box num" readonly></td>
+                            <td><input type="text" id="decadeNum-7" class="luck-box num" readonly></td>
+                            <td><input type="text" id="decadeNum-6" class="luck-box num" readonly></td>
+                            <td><input type="text" id="decadeNum-5" class="luck-box num" readonly></td>
+                            <td><input type="text" id="decadeNum-4" class="luck-box num" readonly></td>
+                            <td><input type="text" id="decadeNum-3" class="luck-box num" readonly></td>
+                            <td><input type="text" id="decadeNum-2" class="luck-box num" readonly></td>
+                            <td><input type="text" id="decadeNum-1" class="luck-box num" readonly></td>
+                        </tr>
+                        <tr>
+                            <td class="label">10<br>Stars</td>
+                            <td><input type="text" id="sdh-10" class="luck-box" readonly></td>
+                            <td><input type="text" id="sdh-9" class="luck-box" readonly></td>
+                            <td><input type="text" id="sdh-8" class="luck-box" readonly></td>
+                            <td><input type="text" id="sdh-7" class="luck-box" readonly></td>
+                            <td><input type="text" id="sdh-6" class="luck-box" readonly></td>
+                            <td><input type="text" id="sdh-5" class="luck-box" readonly></td>
+                            <td><input type="text" id="sdh-4" class="luck-box" readonly></td>
+                            <td><input type="text" id="sdh-3" class="luck-box" readonly></td>
+                            <td><input type="text" id="sdh-2" class="luck-box" readonly></td>
+                            <td><input type="text" id="sdh-1" class="luck-box" readonly></td>
+                        </tr>
+                        <tr>
+                            <td class="label">H.S.</td>
+                            <td><input type="text" id="dh-10" class="luck-box stem" readonly></td>
+                            <td><input type="text" id="dh-9" class="luck-box stem" readonly></td>
+                            <td><input type="text" id="dh-8" class="luck-box stem" readonly></td>
+                            <td><input type="text" id="dh-7" class="luck-box stem" readonly></td>
+                            <td><input type="text" id="dh-6" class="luck-box stem" readonly></td>
+                            <td><input type="text" id="dh-5" class="luck-box stem" readonly></td>
+                            <td><input type="text" id="dh-4" class="luck-box stem" readonly></td>
+                            <td><input type="text" id="dh-3" class="luck-box stem" readonly></td>
+                            <td><input type="text" id="dh-2" class="luck-box stem" readonly></td>
+                            <td><input type="text" id="dh-1" class="luck-box stem" readonly></td>
+                        </tr>
+                        <tr>
+                            <td class="label">E.B.</td>
+                            <td><input type="text" id="de-10" class="luck-box branch" readonly></td>
+                            <td><input type="text" id="de-9" class="luck-box branch" readonly></td>
+                            <td><input type="text" id="de-8" class="luck-box branch" readonly></td>
+                            <td><input type="text" id="de-7" class="luck-box branch" readonly></td>
+                            <td><input type="text" id="de-6" class="luck-box branch" readonly></td>
+                            <td><input type="text" id="de-5" class="luck-box branch" readonly></td>
+                            <td><input type="text" id="de-4" class="luck-box branch" readonly></td>
+                            <td><input type="text" id="de-3" class="luck-box branch" readonly></td>
+                            <td><input type="text" id="de-2" class="luck-box branch" readonly></td>
+                            <td><input type="text" id="de-1" class="luck-box branch" readonly></td>
+                        </tr>
+                        <tr>
+                            <td class="label">10<br>Stars</td>
+                            <td><input type="text" id="sde-10" class="luck-box" readonly></td>
+                            <td><input type="text" id="sde-9" class="luck-box" readonly></td>
+                            <td><input type="text" id="sde-8" class="luck-box" readonly></td>
+                            <td><input type="text" id="sde-7" class="luck-box" readonly></td>
+                            <td><input type="text" id="sde-6" class="luck-box" readonly></td>
+                            <td><input type="text" id="sde-5" class="luck-box" readonly></td>
+                            <td><input type="text" id="sde-4" class="luck-box" readonly></td>
+                            <td><input type="text" id="sde-3" class="luck-box" readonly></td>
+                            <td><input type="text" id="sde-2" class="luck-box" readonly></td>
+                            <td><input type="text" id="sde-1" class="luck-box" readonly></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 세운 -->
+        <section class="yearly-luck-section" id="yearlyLuckSection" style="display: none;">
+            <h2>Yearly Luck</h2>
+            <div class="table-scroll">
+                <table class="luck-table">
+                    <tbody>
+                        <tr>
+                            <td class="label">Year</td>
+                            <td><input type="text" id="yearNum-10" class="luck-box num" readonly></td>
+                            <td><input type="text" id="yearNum-9" class="luck-box num" readonly></td>
+                            <td><input type="text" id="yearNum-8" class="luck-box num" readonly></td>
+                            <td><input type="text" id="yearNum-7" class="luck-box num" readonly></td>
+                            <td><input type="text" id="yearNum-6" class="luck-box num" readonly></td>
+                            <td><input type="text" id="yearNum-5" class="luck-box num" readonly></td>
+                            <td><input type="text" id="yearNum-4" class="luck-box num" readonly></td>
+                            <td><input type="text" id="yearNum-3" class="luck-box num" readonly></td>
+                            <td><input type="text" id="yearNum-2" class="luck-box num" readonly></td>
+                            <td><input type="text" id="yearNum-1" class="luck-box num" readonly></td>
+                        </tr>
+                        <tr>
+                            <td class="label">10<br>Stars</td>
+                            <td><input type="text" id="syh-10" class="luck-box" readonly></td>
+                            <td><input type="text" id="syh-9" class="luck-box" readonly></td>
+                            <td><input type="text" id="syh-8" class="luck-box" readonly></td>
+                            <td><input type="text" id="syh-7" class="luck-box" readonly></td>
+                            <td><input type="text" id="syh-6" class="luck-box" readonly></td>
+                            <td><input type="text" id="syh-5" class="luck-box" readonly></td>
+                            <td><input type="text" id="syh-4" class="luck-box" readonly></td>
+                            <td><input type="text" id="syh-3" class="luck-box" readonly></td>
+                            <td><input type="text" id="syh-2" class="luck-box" readonly></td>
+                            <td><input type="text" id="syh-1" class="luck-box" readonly></td>
+                        </tr>
+                        <tr>
+                            <td class="label">H.S</td>
+                            <td><input type="text" id="yh-10" class="luck-box stem" readonly></td>
+                            <td><input type="text" id="yh-9" class="luck-box stem" readonly></td>
+                            <td><input type="text" id="yh-8" class="luck-box stem" readonly></td>
+                            <td><input type="text" id="yh-7" class="luck-box stem" readonly></td>
+                            <td><input type="text" id="yh-6" class="luck-box stem" readonly></td>
+                            <td><input type="text" id="yh-5" class="luck-box stem" readonly></td>
+                            <td><input type="text" id="yh-4" class="luck-box stem" readonly></td>
+                            <td><input type="text" id="yh-3" class="luck-box stem" readonly></td>
+                            <td><input type="text" id="yh-2" class="luck-box stem" readonly></td>
+                            <td><input type="text" id="yh-1" class="luck-box stem" readonly></td>
+                        </tr>
+                        <tr>
+                            <td class="label">E.B</td>
+                            <td><input type="text" id="ye-10" class="luck-box branch" readonly></td>
+                            <td><input type="text" id="ye-9" class="luck-box branch" readonly></td>
+                            <td><input type="text" id="ye-8" class="luck-box branch" readonly></td>
+                            <td><input type="text" id="ye-7" class="luck-box branch" readonly></td>
+                            <td><input type="text" id="ye-6" class="luck-box branch" readonly></td>
+                            <td><input type="text" id="ye-5" class="luck-box branch" readonly></td>
+                            <td><input type="text" id="ye-4" class="luck-box branch" readonly></td>
+                            <td><input type="text" id="ye-3" class="luck-box branch" readonly></td>
+                            <td><input type="text" id="ye-2" class="luck-box branch" readonly></td>
+                            <td><input type="text" id="ye-1" class="luck-box branch" readonly></td>
+                        </tr>
+                        <tr>
+                            <td class="label">10<br>Stars</td>
+                            <td><input type="text" id="sye-10" class="luck-box" readonly></td>
+                            <td><input type="text" id="sye-9" class="luck-box" readonly></td>
+                            <td><input type="text" id="sye-8" class="luck-box" readonly></td>
+                            <td><input type="text" id="sye-7" class="luck-box" readonly></td>
+                            <td><input type="text" id="sye-6" class="luck-box" readonly></td>
+                            <td><input type="text" id="sye-5" class="luck-box" readonly></td>
+                            <td><input type="text" id="sye-4" class="luck-box" readonly></td>
+                            <td><input type="text" id="sye-3" class="luck-box" readonly></td>
+                            <td><input type="text" id="sye-2" class="luck-box" readonly></td>
+                            <td><input type="text" id="sye-1" class="luck-box" readonly></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 월운 -->
+        <section class="monthly-luck-section" id="monthlyLuckSection" style="display: none;">
+            <h2>Monthly Luck</h2>
+            <div class="table-scroll">
+                <table class="luck-table monthly">
+                    <tbody>
+                        <tr>
+                            <td class="label">Monthly Luck</td>
+                            <td class="month-cell" data-month="Dec">Dec</td>
+                            <td class="month-cell" data-month="Nov">Nov</td>
+                            <td class="month-cell" data-month="Oct">Oct</td>
+                            <td class="month-cell" data-month="Sep">Sep</td>
+                            <td class="month-cell" data-month="Aug">Aug</td>
+                            <td class="month-cell" data-month="Jul">Jul</td>
+                            <td class="month-cell" data-month="Jun">Jun</td>
+                            <td class="month-cell" data-month="May">May</td>
+                            <td class="month-cell" data-month="Apr">Apr</td>
+                            <td class="month-cell" data-month="Mar">Mar</td>
+                            <td class="month-cell" data-month="Feb">Feb</td>
+                            <td class="month-cell" data-month="Jan">Jan</td>
+                        </tr>
+                        <tr>
+                            <td class="label">10<br>Stars</td>
+                            <td><input type="text" id="smh-12" class="luck-box" readonly></td>
+                            <td><input type="text" id="smh-11" class="luck-box" readonly></td>
+                            <td><input type="text" id="smh-10" class="luck-box" readonly></td>
+                            <td><input type="text" id="smh-9" class="luck-box" readonly></td>
+                            <td><input type="text" id="smh-8" class="luck-box" readonly></td>
+                            <td><input type="text" id="smh-7" class="luck-box" readonly></td>
+                            <td><input type="text" id="smh-6" class="luck-box" readonly></td>
+                            <td><input type="text" id="smh-5" class="luck-box" readonly></td>
+                            <td><input type="text" id="smh-4" class="luck-box" readonly></td>
+                            <td><input type="text" id="smh-3" class="luck-box" readonly></td>
+                            <td><input type="text" id="smh-2" class="luck-box" readonly></td>
+                            <td><input type="text" id="smh-1" class="luck-box" readonly></td>
+                        </tr>
+                        <tr>
+                            <td class="label">H.S</td>
+                            <td><input type="text" id="mh-12" class="luck-box stem" readonly></td>
+                            <td><input type="text" id="mh-11" class="luck-box stem" readonly></td>
+                            <td><input type="text" id="mh-10" class="luck-box stem" readonly></td>
+                            <td><input type="text" id="mh-9" class="luck-box stem" readonly></td>
+                            <td><input type="text" id="mh-8" class="luck-box stem" readonly></td>
+                            <td><input type="text" id="mh-7" class="luck-box stem" readonly></td>
+                            <td><input type="text" id="mh-6" class="luck-box stem" readonly></td>
+                            <td><input type="text" id="mh-5" class="luck-box stem" readonly></td>
+                            <td><input type="text" id="mh-4" class="luck-box stem" readonly></td>
+                            <td><input type="text" id="mh-3" class="luck-box stem" readonly></td>
+                            <td><input type="text" id="mh-2" class="luck-box stem" readonly></td>
+                            <td><input type="text" id="mh-1" class="luck-box stem" readonly></td>
+                        </tr>
+                        <tr>
+                            <td class="label">E.B</td>
+                            <td><div class="monthly-branch-cell element-water"><span class="char-main">子</span><span class="char-roman">Ja</span></div></td>
+                            <td><div class="monthly-branch-cell element-water"><span class="char-main">亥</span><span class="char-roman">Hae</span></div></td>
+                            <td><div class="monthly-branch-cell element-earth"><span class="char-main">戌</span><span class="char-roman">Sul</span></div></td>
+                            <td><div class="monthly-branch-cell element-metal"><span class="char-main">酉</span><span class="char-roman">Yu</span></div></td>
+                            <td><div class="monthly-branch-cell element-metal"><span class="char-main">申</span><span class="char-roman">Sin</span></div></td>
+                            <td><div class="monthly-branch-cell element-earth"><span class="char-main">未</span><span class="char-roman">Mi</span></div></td>
+                            <td><div class="monthly-branch-cell element-fire"><span class="char-main">午</span><span class="char-roman">O</span></div></td>
+                            <td><div class="monthly-branch-cell element-fire"><span class="char-main">巳</span><span class="char-roman">Sa</span></div></td>
+                            <td><div class="monthly-branch-cell element-earth"><span class="char-main">辰</span><span class="char-roman">Jin</span></div></td>
+                            <td><div class="monthly-branch-cell element-wood"><span class="char-main">卯</span><span class="char-roman">Myo</span></div></td>
+                            <td><div class="monthly-branch-cell element-wood"><span class="char-main">寅</span><span class="char-roman">In</span></div></td>
+                            <td><div class="monthly-branch-cell element-earth"><span class="char-main">丑</span><span class="char-roman">Chuk</span></div></td>
+                        </tr>
+                        <tr>
+                            <td class="label">10<br>Stars</td>
+                            <td><input type="text" id="sme-12" class="luck-box" readonly></td>
+                            <td><input type="text" id="sme-11" class="luck-box" readonly></td>
+                            <td><input type="text" id="sme-10" class="luck-box" readonly></td>
+                            <td><input type="text" id="sme-9" class="luck-box" readonly></td>
+                            <td><input type="text" id="sme-8" class="luck-box" readonly></td>
+                            <td><input type="text" id="sme-7" class="luck-box" readonly></td>
+                            <td><input type="text" id="sme-6" class="luck-box" readonly></td>
+                            <td><input type="text" id="sme-5" class="luck-box" readonly></td>
+                            <td><input type="text" id="sme-4" class="luck-box" readonly></td>
+                            <td><input type="text" id="sme-3" class="luck-box" readonly></td>
+                            <td><input type="text" id="sme-2" class="luck-box" readonly></td>
+                            <td><input type="text" id="sme-1" class="luck-box" readonly></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+    </main>
+    <footer class="site-footer">
+        <div class="site-footer-cats">
+            <div class="site-footer-cat"><h4>Learn</h4><a href="whatissaju/">What is Saju</a><a href="howtoread/">How to Read</a><a href="tenstars/">Ten Stars</a><a href="stars/">Fateful Stars</a><a href="12stars/">12 Stages</a></div>
+            <div class="site-footer-cat"><h4>Fortune</h4><a href="total/">Total Analysis</a><a href="daily/">Daily Luck</a><a href="monthly/">Monthly Luck</a><a href="yearly/">Yearly Luck</a><a href="decade/">Decade Luck</a></div>
+            <div class="site-footer-cat"><h4>Info</h4><a href="about/">About</a><a href="contact/">Contact</a><a href="privacy/">Privacy Policy</a><a href="terms/">Terms of Service</a></div>
+        </div>
+        <div class="site-footer-copy">&copy; 2026 Sajugazer. All rights reserved. | MIT License (Logic) | <a href="mailto:sajugazer@gmail.com">sajugazer@gmail.com</a></div>
+    </footer>
+    
+
+    <!-- 페이지 컨테이너 -->
+    <div id="page-container" class="page-container"></div>
+
+    <script src="bundle.js"></script>
+    <script src="cookie-consent.js"></script>
+    <script>
+    // === localStorage & Navigation for subpages ===
+    (function() {
+        function getSajuBirthData(extra) {
+            return Object.assign({
+                birthYear: document.getElementById('birthYear').value,
+                birthMonth: document.getElementById('birthMonth').value,
+                birthDay: document.getElementById('birthDay').value,
+                birthHour: document.getElementById('birthHour').value,
+                birthMinute: document.getElementById('birthMinute').value,
+                longitude: document.getElementById('longitude').value,
+                refLongitude: document.getElementById('refLongitude').value,
+                gender: document.getElementById('gender').value,
+                summertime: document.getElementById('summertime').value
+            }, extra || {});
+        }
+
+        function saveBirthData(extra) {
+            localStorage.setItem('sajuBirthData', JSON.stringify(getSajuBirthData(extra)));
+        }
+
+        // Save birth data after every calculation
+        var origCalculate = window.calculate;
+        window.calculate = function() {
+            origCalculate();
+            if (window.AppState && window.AppState.sajuResult) {
+                saveBirthData();
+            }
+        };
+
+        // Override "Analyze My Saju" button to navigate
+        document.addEventListener('DOMContentLoaded', function() {
+            var sajuBtn = document.getElementById('sajuAnalysisBtn');
+            if (sajuBtn) {
+                // Remove old listener by cloning
+                var newBtn = sajuBtn.cloneNode(true);
+                sajuBtn.parentNode.replaceChild(newBtn, sajuBtn);
+                newBtn.addEventListener('click', function() {
+                    if (!window.AppState || !window.AppState.sajuResult) return;
+                    saveBirthData();
+                    location.href = 'total/';
+                });
+            }
+        });
+
+        // Override fortune navigation functions
+        window.checkAndShowDailyFortune = function() {
+            if (!window.AppState || !window.AppState.sajuResult) return;
+            var dateStr = document.getElementById('dailyFortuneDate').value;
+            if (!dateStr) return;
+            saveBirthData({ dailyDate: dateStr });
+            location.href = 'daily/';
+        };
+
+        window.checkAndShowMonthlyFortune = function() {
+            if (!window.AppState || !window.AppState.sajuResult) return;
+            var monthStr = document.getElementById('monthlyFortuneDate').value;
+            if (!monthStr) return;
+            var parts = monthStr.split('-');
+            saveBirthData({ monthlyYear: parts[0], monthlyMonth: parts[1] });
+            location.href = 'monthly/';
+        };
+
+        window.checkAndShowYearlyFortune = function() {
+            if (!window.AppState || !window.AppState.sajuResult) return;
+            var year = document.getElementById('yearlyFortuneYear').value;
+            if (!year) return;
+            saveBirthData({ yearlyYear: year });
+            location.href = 'yearly/';
+        };
+
+        window.checkAndShowDecadeFortune = function() {
+            if (!window.AppState || !window.AppState.sajuResult) return;
+            var decadeIndex = document.getElementById('decadeFortuneSelect').value;
+            if (!decadeIndex) return;
+            saveBirthData({ decadeIndex: decadeIndex });
+            location.href = 'decade/';
+        };
+    })();
+    </script>
+
+</body>
+</html>
