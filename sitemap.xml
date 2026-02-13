@@ -2,126 +2,151 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://sajugazer.com/</loc>
+    <lastmod>2026-02-13</lastmod>
     <priority>1.0</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://sajugazer.com/about/</loc>
+    <lastmod>2026-02-13</lastmod>
     <priority>0.5</priority>
-    <changefreq>yearly</changefreq>
+    <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://sajugazer.com/contact/</loc>
+    <lastmod>2026-02-13</lastmod>
     <priority>0.5</priority>
-    <changefreq>yearly</changefreq>
+    <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://sajugazer.com/privacy/</loc>
+    <lastmod>2026-02-13</lastmod>
     <priority>0.3</priority>
     <changefreq>yearly</changefreq>
   </url>
   <url>
     <loc>https://sajugazer.com/terms/</loc>
+    <lastmod>2026-02-13</lastmod>
     <priority>0.3</priority>
     <changefreq>yearly</changefreq>
   </url>
   <url>
     <loc>https://sajugazer.com/whatissaju/</loc>
+    <lastmod>2026-02-13</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://sajugazer.com/howtoread/</loc>
+    <lastmod>2026-02-13</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://sajugazer.com/stars/</loc>
+    <lastmod>2026-02-13</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://sajugazer.com/tenstars/</loc>
+    <lastmod>2026-02-13</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://sajugazer.com/12stars/</loc>
+    <lastmod>2026-02-13</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://sajugazer.com/total/</loc>
+    <lastmod>2026-02-13</lastmod>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://sajugazer.com/daily/</loc>
+    <lastmod>2026-02-13</lastmod>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://sajugazer.com/monthly/</loc>
+    <lastmod>2026-02-13</lastmod>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://sajugazer.com/yearly/</loc>
+    <lastmod>2026-02-13</lastmod>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://sajugazer.com/decade/</loc>
+    <lastmod>2026-02-13</lastmod>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://sajugazer.com/example/male-1990/total/</loc>
+    <lastmod>2026-02-13</lastmod>
     <priority>0.5</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://sajugazer.com/example/male-1990/daily/</loc>
+    <lastmod>2026-02-13</lastmod>
     <priority>0.5</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://sajugazer.com/example/male-1990/monthly/</loc>
+    <lastmod>2026-02-13</lastmod>
     <priority>0.5</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://sajugazer.com/example/male-1990/yearly/</loc>
+    <lastmod>2026-02-13</lastmod>
     <priority>0.5</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://sajugazer.com/example/male-1990/decade/</loc>
+    <lastmod>2026-02-13</lastmod>
     <priority>0.5</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://sajugazer.com/example/female-2000/total/</loc>
+    <lastmod>2026-02-13</lastmod>
     <priority>0.5</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://sajugazer.com/example/female-2000/daily/</loc>
+    <lastmod>2026-02-13</lastmod>
     <priority>0.5</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://sajugazer.com/example/female-2000/monthly/</loc>
+    <lastmod>2026-02-13</lastmod>
     <priority>0.5</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://sajugazer.com/example/female-2000/yearly/</loc>
+    <lastmod>2026-02-13</lastmod>
     <priority>0.5</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://sajugazer.com/example/female-2000/decade/</loc>
+    <lastmod>2026-02-13</lastmod>
     <priority>0.5</priority>
     <changefreq>monthly</changefreq>
   </url>
