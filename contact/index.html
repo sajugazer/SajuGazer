@@ -11,6 +11,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://sajugazer.com/contact/">
     <meta property="og:site_name" content="Sajugazer">
+    <link rel="canonical" href="https://sajugazer.com/contact/">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1718960686183338"
      crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../style.css">
@@ -20,6 +21,16 @@
         .article-section h2 { color: #001aff; font-size: 1.1rem; margin-bottom: 12px; border-bottom: 2px solid rgba(0,0,0,0.3); padding-bottom: 6px; }
         .article-section p { color: #000; font-size: 0.92rem; line-height: 1.8; margin-bottom: 12px; }
         .article-section a { color: #001aff; }
+        .contact-form { display: flex; flex-direction: column; gap: 12px; }
+        .contact-form label { color: #000; font-size: 0.88rem; font-weight: bold; }
+        .contact-form input, .contact-form textarea { width: 100%; padding: 10px 12px; border: 1px solid rgba(0,0,0,0.2); border-radius: 8px; font-size: 0.88rem; font-family: inherit; background: rgba(255,255,255,0.9); box-sizing: border-box; }
+        .contact-form textarea { min-height: 120px; resize: vertical; }
+        .contact-form button { padding: 11px 0; background: #001aff; color: #fff; border: none; border-radius: 8px; font-size: 0.95rem; font-weight: bold; cursor: pointer; }
+        .contact-form button:hover { background: #2240ff; }
+        .contact-form .form-msg { font-size: 0.82rem; color: #28a745; display: none; text-align: center; }
+        .social-links { display: flex; flex-direction: column; gap: 8px; }
+        .social-links a { display: flex; align-items: center; gap: 8px; color: #001aff; text-decoration: none; font-size: 0.92rem; }
+        .social-links a:hover { text-decoration: underline; }
         .article-back { padding: 8px 16px; background: rgba(255,255,255,0.2); border: none; border-radius: 12px; color: #fff; font-size: 0.9rem; cursor: pointer; text-decoration: none; display: inline-block; margin-bottom: 10px; }
         .article-back:hover { background: rgba(0,31,255,0.7); font-weight: bold; }
         .article-header { display: flex; align-items: center; gap: 15px; margin-bottom: 20px; }
@@ -40,7 +51,7 @@
         <div class="site-nav-menu">
             <div class="site-nav-category"><div class="site-nav-cat-title">Learn</div><div class="site-nav-links"><a href="../whatissaju/">What is Saju</a><a href="../howtoread/">How to Read</a><a href="../tenstars/">Ten Stars</a><a href="../stars/">Fateful Stars</a><a href="../12stars/">12 Stages</a></div></div>
             <div class="site-nav-category"><div class="site-nav-cat-title">Fortune</div><div class="site-nav-links"><a href="../total/">Total</a><a href="../daily/">Daily</a><a href="../monthly/">Monthly</a><a href="../yearly/">Yearly</a><a href="../decade/">Decade</a></div></div>
-            <div class="site-nav-category"><div class="site-nav-cat-title">Info</div><div class="site-nav-links"><a href="../about/">About</a><a href="../contact/">Contact</a><a href="../privacy/">Privacy</a><a href="../terms/">Terms</a></div></div>
+            <div class="site-nav-category"><div class="site-nav-cat-title">Info</div><div class="site-nav-links"><a href="../about/">About</a><a href="../contact/">Contact</a></div></div>
         </div>
     </nav>
     <div class="article-page">
@@ -55,14 +66,41 @@
         </section>
 
         <section class="article-section">
-            <h2>General Inquiries</h2>
-            <p>For general questions, feedback, or support regarding Sajugazer services, please contact us at:</p>
+            <h2>Send Us a Message</h2>
+            <form class="contact-form" id="contactForm" action="https://formsubmit.co/sajugazer@gmail.com" method="POST">
+                <input type="hidden" name="_subject" value="Sajugazer Contact Form">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="https://sajugazer.com/contact/">
+                <label for="cf-name">Name</label>
+                <input type="text" id="cf-name" name="name" placeholder="Your name" required>
+                <label for="cf-email">Email</label>
+                <input type="email" id="cf-email" name="email" placeholder="Your email address" required>
+                <label for="cf-subject">Subject</label>
+                <input type="text" id="cf-subject" name="_subject" placeholder="What is this about?">
+                <label for="cf-message">Message</label>
+                <textarea id="cf-message" name="message" placeholder="Write your message here..." required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+
+        <section class="article-section">
+            <h2>Email</h2>
+            <p>You can also reach us directly at:</p>
             <p><strong>Email:</strong> <a href="mailto:sajugazer@gmail.com">sajugazer@gmail.com</a></p>
         </section>
 
         <section class="article-section">
+            <h2>Follow Us</h2>
+            <p>Stay connected and get the latest updates through our social channels:</p>
+            <div class="social-links">
+                <a href="https://instagram.com/sajugazer" target="_blank" rel="noopener">Instagram &mdash; @sajugazer</a>
+                <a href="https://youtube.com/@sajugazer" target="_blank" rel="noopener">YouTube &mdash; @sajugazer</a>
+            </div>
+        </section>
+
+        <section class="article-section">
             <h2>Business &amp; Partnership</h2>
-            <p>For business inquiries, partnership proposals, or advertising-related matters, please reach out to:</p>
+            <p>For business inquiries, partnership proposals, or collaboration opportunities, please reach out to:</p>
             <p><strong>Email:</strong> <a href="mailto:sajugazer@gmail.com">sajugazer@gmail.com</a></p>
         </section>
 

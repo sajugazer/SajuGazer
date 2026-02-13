@@ -5,7 +5,7 @@
     document.head.appendChild(s);
     var b = document.createElement('div');
     b.className = 'cc-banner';
-    b.innerHTML = '<span>This site uses cookies for analytics and advertising (Google AdSense). By continuing, you agree to our <a href="/privacy/">Privacy Policy</a>.</span><button id="ccAccept">Accept</button>';
+    b.innerHTML = '<span>This site uses cookies and local storage for site functionality and to improve your experience. By continuing, you agree to our <a href="/privacy/">Privacy Policy</a>.</span><button id="ccAccept">Accept</button>';
     document.body.appendChild(b);
     document.getElementById('ccAccept').addEventListener('click', function() {
         localStorage.setItem('cookieConsent', '1');
