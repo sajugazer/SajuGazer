@@ -1,0 +1,16 @@
+{
+  "name": "Sajugazer",
+  "short_name": "Sajugazer",
+  "description": "Free Saju (Four Pillars of Destiny) chart calculator with structured life readings and educational content.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a2e",
+  "theme_color": "#001aff",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
